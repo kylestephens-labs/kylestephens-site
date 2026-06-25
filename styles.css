@@ -139,7 +139,7 @@ h1 {
   place-items: center;
 }
 
-.visual::before {
+.visual:empty::before {
   content: "";
   position: absolute;
   width: min(88%, 440px);
@@ -158,7 +158,6 @@ h1 {
   width: min(58%, 260px);
   border-radius: 28%;
   box-shadow: 0 26px 70px rgba(23, 32, 29, 0.24);
-  transform: rotate(-5deg);
   animation: lift 700ms ease both;
 }
 
@@ -287,11 +286,11 @@ p {
 @keyframes lift {
   from {
     opacity: 0;
-    transform: translateY(16px) rotate(-5deg);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
-    transform: translateY(0) rotate(-5deg);
+    transform: translateY(0);
   }
 }
 
